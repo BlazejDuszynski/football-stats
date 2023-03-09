@@ -1,8 +1,16 @@
 button {
     border: none;
-    background-color: rgb(0, 191, 255);
+    background-color: rgb(65, 105, 225);
     padding: 0 40px;
     border-radius: 20px;
     cursor: pointer;
     font-family: 'Lato', sans-serif;
 }
+
+/* Royal blue: RGB(65, 105, 225)
+Navy blue: RGB(0, 0, 128)
+Sky blue: RGB(135, 206, 235)
+Steel blue: RGB(70, 130, 180)
+Baby blue: RGB(137, 207, 240)
+Turquoise: RGB(64, 224, 208)
+Teal: RGB(0, 128, 128) */
