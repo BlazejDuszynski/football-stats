@@ -1,7 +1,15 @@
 .dropdown {
     width: 50%;
     position: relative;
-    margin: 2em;
+}
+
+.dropdown::before {
+    content: "Choose season";
+    position: absolute;
+    top: -20px;
+    font-size: .7em;
+    font-style: italic;
+    letter-spacing: .3px;
 }
 
 .dropdown * {

@@ -6,7 +6,7 @@ const Dropdown = () => {
   const [isDropdownActive, setIsDropDownActive] = useState(false);
 
   const activateDropdownHandler = () => {
-    setIsDropDownActive(true);
+    setIsDropDownActive(!isDropdownActive);
   };
 
   return (
