@@ -1,4 +1,3 @@
-import React, { Fragment } from "react";
 import classes from "./AppHeader.module.css";
 
 function AppHeader(props) {
