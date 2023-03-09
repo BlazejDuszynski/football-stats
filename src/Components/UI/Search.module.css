@@ -1,6 +1,6 @@
 section {
     max-width: 50%;
-    margin: 80px 0;
+    margin: 80px auto;
     display: flex;
     gap: 30px;
 }

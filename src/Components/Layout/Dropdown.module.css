@@ -31,7 +31,12 @@
     background-color: rgb(143, 143, 143);
 }
 
+.arrowIcon {
+    background-color: inherit;
+}
+
 .arrowIconRotated {
+    background-color: inherit;
     transform: rotate(180deg);
 }
 
@@ -49,9 +54,22 @@
     background-color: grey;
     border-radius: 0.5em;
     position: absolute;
-    top: 3em;
+    top: 3.7em;
     left: 50%;
     width: 100%;
     transform: translateX(-50%);
     z-index: 2;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+.menuItem {
+    background-color: inherit;
+    padding: 0.3em 0.5em;
+    cursor: pointer;
+    border-radius: 0.5em;
+}
+
+.menuItem:hover {
+    background-color: rgb(143, 143, 143);
 }
