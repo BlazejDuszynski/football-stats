@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import classes from "./Dropdown.module.css";
+import DropdownItem from "./DropdownItem";
 
 const Dropdown = () => {
   const [isDropdownActive, setIsDropDownActive] = useState(false);
+  const [selectedSeason, setSelectedSeason] = useState("");
 
   const activateDropdownHandler = () => {
     setIsDropDownActive(!isDropdownActive);
@@ -25,17 +27,24 @@ const Dropdown = () => {
     "2020/2021",
   ];
 
+  const selectSeasonHandler = (season) => {
+    setSelectedSeason(season);
+    setIsDropDownActive(false);
+  };
+
   return (
     <div className={classes.dropdown}>
       <div className={classes.select} onClick={activateDropdownHandler}>
-        <span></span>
+        <span className={classes.selection}>{selectedSeason}</span>
         <ArrowDropDownIcon
-          className={isDropdownActive? classes.arrowIconRotated : classes.arrowIcon}
+          className={
+            isDropdownActive ? classes.arrowIconRotated : classes.arrowIcon
+          }
         />
       </div>
       <ul className={isDropdownActive ? classes.menu__active : classes.menu}>
         {seasons.map((season) => {
-          return <li className={classes.menuItem}>{season}</li>;
+          return <DropdownItem season={season} onClick={selectSeasonHandler} />;
         })}
       </ul>
     </div>

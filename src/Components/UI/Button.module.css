@@ -5,12 +5,9 @@ button {
     border-radius: 20px;
     cursor: pointer;
     font-family: 'Lato', sans-serif;
+    transition: background-color 0.15s linear;
 }
 
-/* Royal blue: RGB(65, 105, 225)
-Navy blue: RGB(0, 0, 128)
-Sky blue: RGB(135, 206, 235)
-Steel blue: RGB(70, 130, 180)
-Baby blue: RGB(137, 207, 240)
-Turquoise: RGB(64, 224, 208)
-Teal: RGB(0, 128, 128) */
+button:hover {
+    background-color: rgb(40, 86, 224);
+}
