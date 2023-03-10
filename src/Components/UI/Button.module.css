@@ -1,13 +1,15 @@
 .button {
     border: none;
-    background-color: rgb(65, 105, 225);
+    background: rgb(135, 125, 252);
+    background: linear-gradient(165deg, rgba(135, 125, 252, 1) 0%, rgba(94, 81, 255, 1) 30%, rgba(94, 81, 255, 1) 70%, rgba(135, 125, 252, 1) 100%);
     padding: 0 40px;
     border-radius: 20px;
     cursor: pointer;
     font-family: 'Lato', sans-serif;
     transition: background-color 0.15s linear;
+    text-transform: uppercase;
 }
 
 button:hover {
-    background-color: rgb(40, 86, 224);
+    background-color: #6a5ffd;
 }

@@ -7,15 +7,16 @@
 }
 
 .logo {
-    background-image: url("/images/manchester-united-logo-F14DA1FCCD-seeklogo.com.png");
+    background-image: url("/images/premier-league-2-logo.png");
     background-size: contain;
+    color: white;
     background-repeat: no-repeat;
-    height: 100px;
-    width: 130px;
+    height: 150px;
+    width: 200px;
 }
 
 h1 {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     font-size: 1.5em;
 }
 
