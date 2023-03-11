@@ -11,7 +11,6 @@ function App() {
       <AppHeader />
       <Search>
         <Dropdown />
-        <Button />
       </Search>
       <SquadSection />
     </div>

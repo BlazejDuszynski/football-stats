@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import classes from "./Dropdown.module.css";
 import DropdownItem from "./DropdownItem";
+import Button from "../UI/Button";
 
 const Dropdown = () => {
   const [isDropdownActive, setIsDropDownActive] = useState(false);
@@ -33,21 +34,26 @@ const Dropdown = () => {
   };
 
   return (
-    <div className={classes.dropdown}>
-      <div className={classes.select} onClick={activateDropdownHandler}>
-        <span className={classes.selection}>{selectedSeason}</span>
-        <ArrowDropDownIcon
-          className={
-            isDropdownActive ? classes.arrowIconRotated : classes.arrowIcon
-          }
-        />
+    <Fragment>
+      <div className={classes.dropdown}>
+        <div className={classes.select} onClick={activateDropdownHandler}>
+          <span className={classes.selection}>{selectedSeason}</span>
+          <ArrowDropDownIcon
+            className={
+              isDropdownActive ? classes.arrowIconRotated : classes.arrowIcon
+            }
+          />
+        </div>
+        <ul className={isDropdownActive ? classes.menu__active : classes.menu}>
+          {seasons.map((season) => {
+            return (
+              <DropdownItem season={season} onClick={selectSeasonHandler} />
+            );
+          })}
+        </ul>
       </div>
-      <ul className={isDropdownActive ? classes.menu__active : classes.menu}>
-        {seasons.map((season) => {
-          return <DropdownItem season={season} onClick={selectSeasonHandler} />;
-        })}
-      </ul>
-    </div>
+      <Button />
+    </Fragment>
   );
 };
 
