@@ -1,8 +1,9 @@
 import React from "react";
+import classes from "./SquadSection.module.css";
 
 function SquadSection(props) {
   return (
-    <div>
+    <section className={classes.squadSection}>
       <table>
         <tr>
           <th>No.</th>
@@ -11,21 +12,21 @@ function SquadSection(props) {
           <th>Minutes</th>
           <th>Goals</th>
           <th>Assists</th>
-          <th>More</th>
+          <th>Details</th>
         </tr>
         <tr>
           <td>1</td>
           <td>David de Gea</td>
           <td>37</td>
           <td>1536</td>
-          <td>Goals</td>
-          <td>Minutes</td>
+          <td>0</td>
+          <td>0</td>
           <td>
             <button>More</button>
           </td>
         </tr>
       </table>
-    </div>
+    </section>
   );
 }
 
