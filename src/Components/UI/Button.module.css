@@ -1,4 +1,4 @@
-.button {
+/* .button {
     border: none;
     background: rgb(135, 125, 252);
     background: linear-gradient(165deg, rgba(135, 125, 252, 1) 0%, rgba(94, 81, 255, 1) 30%, rgba(94, 81, 255, 1) 70%, rgba(135, 125, 252, 1) 100%);
@@ -12,4 +12,26 @@
 
 button:hover {
     background-color: #6a5ffd;
+} */
+
+
+.button {
+    background-image: linear-gradient(to right, #4776E6 0%, #8E54E9 51%, #4776E6 100%);
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    display: block;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
 }
