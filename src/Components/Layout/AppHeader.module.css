@@ -7,7 +7,7 @@
 }
 
 .logo {
-    background-image: url("/images/premier-league-2-logo.png");
+    background-image: url("/images/premier\ league\ logo.png");
     background-size: contain;
     color: white;
     background-repeat: no-repeat;
