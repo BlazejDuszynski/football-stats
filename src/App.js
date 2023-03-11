@@ -3,6 +3,7 @@ import Dropdown from "./Components/Layout/Dropdown";
 import AppHeader from "./Components/Layout/AppHeader";
 import Search from "./Components/UI/Search";
 import Button from "./Components/UI/Button";
+import SquadSection from "./Components/Layout/SquadSection";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Dropdown />
         <Button />
       </Search>
+      <SquadSection />
     </div>
   );
 }
