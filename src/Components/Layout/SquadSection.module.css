@@ -20,7 +20,7 @@ td {
     padding: 10px;
 }
 
-button {
+.moreButton {
     border: none;
     background-color: inherit;
     cursor: pointer;
@@ -30,7 +30,7 @@ button {
     transition: all 0.1s ease-in-out;
 }
 
-button:hover {
+.moreButton:hover {
     border-bottom: 1px solid #97b6ff;
     color: #97b6ff;
 }

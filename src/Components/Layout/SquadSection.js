@@ -22,7 +22,7 @@ function SquadSection(props) {
           <td>0</td>
           <td>0</td>
           <td>
-            <button>More</button>
+            <button className={classes.moreButton}>More</button>
           </td>
         </tr>
       </table>
