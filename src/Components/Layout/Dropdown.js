@@ -7,24 +7,6 @@ import SquadContext from "../Store/squad-context";
 const Dropdown = () => {
   const squadCtx = useContext(SquadContext);
 
-  const options = {
-    method: "GET",
-    headers: {
-      "X-RapidAPI-Key": "72cff716cdmshc41548afe41ba07p18c95cjsn9521d9d88440",
-      "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com",
-    },
-  };
-
-  async function onDropdownSubmit() {
-    const response = await fetch(
-      "https://api-football-v1.p.rapidapi.com/v3/players?team=33&season=" +
-        squadCtx.season.substring(0, 4),
-      options
-    );
-    const teamSquad = await response.json();
-    console.log(teamSquad);
-  }
-
   return (
     <Fragment>
       <div className={classes.dropdown}>
@@ -53,7 +35,7 @@ const Dropdown = () => {
           })}
         </ul>
       </div>
-      <button className={classes.button} onClick={onDropdownSubmit}>
+      <button className={classes.button} onClick={squadCtx.fetchSquadHandler}>
         Search
       </button>
     </Fragment>

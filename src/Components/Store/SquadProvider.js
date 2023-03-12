@@ -4,6 +4,7 @@ import SquadContext from "./squad-context";
 const SquadProvider = (props) => {
   const [selectedSeason, setSelectedSeason] = useState("");
   const [isDropdownActive, setIsDropDownActive] = useState(false);
+  const [squad, setSquad] = useState([]);
 
   const selectSeasonHandler = (season) => {
     setSelectedSeason(season);
@@ -13,6 +14,24 @@ const SquadProvider = (props) => {
   const toggleDropdownHandler = () => {
     setIsDropDownActive(!isDropdownActive);
   };
+
+  const options = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": "72cff716cdmshc41548afe41ba07p18c95cjsn9521d9d88440",
+      "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com",
+    },
+  };
+
+  async function onDropdownSubmit() {
+    const response = await fetch(
+      "https://api-football-v1.p.rapidapi.com/v3/players?team=33&season=" +
+        selectedSeason.substring(0, 4),
+      options
+    );
+    const teamSquad = await response.json();
+    setSquad(teamSquad);
+  }
 
   const squadContext = {
     seasons: [
@@ -32,8 +51,8 @@ const SquadProvider = (props) => {
     ],
     season: selectedSeason,
     selectSeasonHandler: selectSeasonHandler,
-    squad: [],
-    fetchSquadHandler: function () {},
+    squad: squad,
+    fetchSquadHandler: onDropdownSubmit,
     dropdownActive: isDropdownActive,
     toggleDropdown: toggleDropdownHandler,
   };
