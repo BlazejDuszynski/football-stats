@@ -4,6 +4,7 @@ import AppHeader from "./Components/Layout/AppHeader";
 import Search from "./Components/UI/Search";
 import Button from "./Components/UI/Button";
 import SquadSection from "./Components/Layout/SquadSection";
+import SquadProvider from "./Components/Store/SquadProvider";
 
 function App() {
   return (
@@ -12,7 +13,9 @@ function App() {
       <Search>
         <Dropdown />
       </Search>
-      <SquadSection />
+      <SquadProvider>
+        <SquadSection />
+      </SquadProvider>
     </div>
   );
 }

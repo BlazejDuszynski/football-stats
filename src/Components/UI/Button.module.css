@@ -14,7 +14,7 @@ button:hover {
     background-color: #6a5ffd;
 } */
 
-
+/* 
 .button {
     background-image: linear-gradient(to right, #4776E6 0%, #8E54E9 51%, #4776E6 100%);
     padding: 15px 45px;
@@ -29,9 +29,6 @@ button:hover {
     cursor: pointer;
 }
 
-button:hover {
+.button:hover {
     background-position: right center;
     /* change the direction of the change here */
-    color: #fff;
-    text-decoration: none;
-}
