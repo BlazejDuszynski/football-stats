@@ -17,14 +17,14 @@ const Dropdown = () => {
     },
   };
 
-  const activateDropdownHandler = () => {
+  const toggleDropdownHandler = () => {
     setIsDropDownActive(!isDropdownActive);
   };
 
   async function onDropdownSubmit() {
     const response = await fetch(
       "https://api-football-v1.p.rapidapi.com/v3/players?team=33&season=" +
-      squadCtx.season.substring(0, 4),
+        squadCtx.season.substring(0, 4),
       options
     );
     const teamSquad = await response.json();
@@ -34,7 +34,7 @@ const Dropdown = () => {
   return (
     <Fragment>
       <div className={classes.dropdown}>
-        <div className={classes.select} onClick={activateDropdownHandler}>
+        <div className={classes.select} onClick={toggleDropdownHandler}>
           <span className={classes.selection}>{squadCtx.season}</span>
           <ArrowDropDownIcon
             className={
@@ -43,7 +43,7 @@ const Dropdown = () => {
           />
         </div>
         <ul className={isDropdownActive ? classes.menu__active : classes.menu}>
-          {seasons.map((season) => {
+          {squadCtx.seasons.map((season) => {
             return (
               <DropdownItem
                 season={season}
