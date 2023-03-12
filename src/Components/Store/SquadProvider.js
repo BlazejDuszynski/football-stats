@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SquadContext from "./squad-context";
 
 const SquadProvider = (props) => {
   const [selectedSeason, setSelectedSeason] = useState("");
@@ -8,7 +9,7 @@ const SquadProvider = (props) => {
     // setIsDropDownActive(false);
   };
 
-  const SquadContext = {
+  const squadContext = {
     seasons: [
       "2008/2009",
       "2009/2010",
@@ -31,7 +32,7 @@ const SquadProvider = (props) => {
   };
 
   return (
-    <SquadContext.Provider value={SquadContext}>
+    <SquadContext.Provider value={squadContext}>
       {props.children}
     </SquadContext.Provider>
   );
