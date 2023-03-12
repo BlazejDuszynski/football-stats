@@ -6,6 +6,8 @@ const SquadContext = React.createContext({
   selectSeasonHandler: () => {},
   squad: [],
   fetchSquadHandler: function () {},
+  dropdownActive: "",
+  toggleDropdown: () => {},
 });
 
 export default SquadContext;

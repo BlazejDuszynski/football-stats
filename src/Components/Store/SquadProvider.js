@@ -3,10 +3,15 @@ import SquadContext from "./squad-context";
 
 const SquadProvider = (props) => {
   const [selectedSeason, setSelectedSeason] = useState("");
+  const [isDropdownActive, setIsDropDownActive] = useState(false);
 
   const selectSeasonHandler = (season) => {
     setSelectedSeason(season);
-    // setIsDropDownActive(false);
+    setIsDropDownActive(false);
+  };
+
+  const toggleDropdownHandler = () => {
+    setIsDropDownActive(!isDropdownActive);
   };
 
   const squadContext = {
@@ -29,6 +34,8 @@ const SquadProvider = (props) => {
     selectSeasonHandler: selectSeasonHandler,
     squad: [],
     fetchSquadHandler: function () {},
+    dropdownActive: isDropdownActive,
+    toggleDropdown: toggleDropdownHandler,
   };
 
   return (

@@ -1,12 +1,10 @@
-import React, { Fragment, useState, useContext } from "react";
+import React, { Fragment, useContext } from "react";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import classes from "./Dropdown.module.css";
 import DropdownItem from "./DropdownItem";
 import SquadContext from "../Store/squad-context";
 
 const Dropdown = () => {
-  const [isDropdownActive, setIsDropDownActive] = useState(false);
-
   const squadCtx = useContext(SquadContext);
 
   const options = {
@@ -15,10 +13,6 @@ const Dropdown = () => {
       "X-RapidAPI-Key": "72cff716cdmshc41548afe41ba07p18c95cjsn9521d9d88440",
       "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com",
     },
-  };
-
-  const toggleDropdownHandler = () => {
-    setIsDropDownActive(!isDropdownActive);
   };
 
   async function onDropdownSubmit() {
@@ -34,15 +28,21 @@ const Dropdown = () => {
   return (
     <Fragment>
       <div className={classes.dropdown}>
-        <div className={classes.select} onClick={toggleDropdownHandler}>
+        <div className={classes.select} onClick={squadCtx.toggleDropdown}>
           <span className={classes.selection}>{squadCtx.season}</span>
           <ArrowDropDownIcon
             className={
-              isDropdownActive ? classes.arrowIconRotated : classes.arrowIcon
+              squadCtx.dropdownActive
+                ? classes.arrowIconRotated
+                : classes.arrowIcon
             }
           />
         </div>
-        <ul className={isDropdownActive ? classes.menu__active : classes.menu}>
+        <ul
+          className={
+            squadCtx.dropdownActive ? classes.menu__active : classes.menu
+          }
+        >
           {squadCtx.seasons.map((season) => {
             return (
               <DropdownItem
