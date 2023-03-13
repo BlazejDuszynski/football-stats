@@ -8,8 +8,8 @@ import SquadProvider from "./Components/Store/SquadProvider";
 function App() {
   return (
     <div className="App">
+      <AppHeader />
       <SquadProvider>
-        <AppHeader />
         <Search>
           <Dropdown />
         </Search>

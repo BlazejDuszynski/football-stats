@@ -3,34 +3,3 @@
     background-color: #111029;
     border-radius: 20px;
 }
-
-table {
-    width: 100%;
-}
-
-th {
-    background-color: whitesmoke;
-    background-color: #1c1b46;
-    padding: 10px;
-}
-
-td {
-    text-align: center;
-    background-color: #111029;
-    padding: 10px;
-}
-
-.moreButton {
-    border: none;
-    background-color: inherit;
-    cursor: pointer;
-    color: #7fa3f7;
-    text-transform: uppercase;
-    border-bottom: 1px solid #7fa3f7;
-    transition: all 0.1s ease-in-out;
-}
-
-.moreButton:hover {
-    border-bottom: 1px solid #97b6ff;
-    color: #97b6ff;
-}

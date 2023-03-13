@@ -1,0 +1,9 @@
+table {
+    width: 100%;
+}
+
+th {
+    background-color: whitesmoke;
+    background-color: #1c1b46;
+    padding: 10px;
+}
