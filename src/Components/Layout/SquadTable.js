@@ -1,11 +1,12 @@
-import React, { useContext, useEffect } from "react";
-import classes from "./SquadTable.module.css";
+import React, { useContext } from "react";
+import "./SquadTable.module.css";
 import SquadItem from "./SquadItem";
 import SquadContext from "../Store/squad-context";
+import PlayerWindowContext from "../Store/playerWindow-context";
 
 const SquadTable = () => {
   const squadCtx = useContext(SquadContext);
-  console.log(squadCtx.squad);
+  const { openWindow } = useContext(PlayerWindowContext);
 
   return (
     <table>
@@ -21,6 +22,7 @@ const SquadTable = () => {
         squadCtx.squad.response.map((item) => {
           return (
             <SquadItem
+              onWindowOpen={openWindow}
               name={item.player.name}
               games={item.statistics[0].games.appearences}
               minutes={item.statistics[0].games.minutes}
