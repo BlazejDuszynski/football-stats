@@ -28,6 +28,7 @@ const Dropdown = () => {
           {squadCtx.seasons.map((season) => {
             return (
               <DropdownItem
+                key={Math.random()}
                 season={season}
                 onClick={squadCtx.selectSeasonHandler}
               />

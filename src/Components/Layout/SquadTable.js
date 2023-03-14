@@ -23,6 +23,7 @@ const SquadTable = () => {
           return (
             <SquadItem
               onWindowOpen={openWindow}
+              key={item.player.id}
               name={item.player.name}
               games={item.statistics[0].games.appearences}
               minutes={item.statistics[0].games.minutes}
