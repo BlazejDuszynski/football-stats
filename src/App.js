@@ -10,15 +10,15 @@ import PlayerWindowContext from "./Components/Store/playerWindow-context";
 import PlayerWindowProvider from "./Components/Store/PlayerWindowProvider";
 
 function App() {
-  const { isPlayerWindowOpen } = useContext(PlayerWindowContext);
+  const playerWindowCtx = useContext(PlayerWindowContext);
 
-  console.log(isPlayerWindowOpen);
+  console.log(playerWindowCtx.playerWindowOpen);
 
   return (
     <Fragment>
       <div className="App">
         <PlayerWindowProvider>
-          {isPlayerWindowOpen && <PlayerWindow />}
+          {playerWindowCtx.playerWindowOpen && <PlayerWindow />}
           <AppHeader />
           <SquadProvider>
             <Search>

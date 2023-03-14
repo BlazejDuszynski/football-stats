@@ -6,7 +6,7 @@ import PlayerWindowContext from "../Store/playerWindow-context";
 
 const SquadTable = () => {
   const squadCtx = useContext(SquadContext);
-  const { openWindow } = useContext(PlayerWindowContext);
+  const { openPlayerWindow } = useContext(PlayerWindowContext);
 
   return (
     <table>
@@ -22,7 +22,7 @@ const SquadTable = () => {
         squadCtx.squad.response.map((item) => {
           return (
             <SquadItem
-              onWindowOpen={openWindow}
+              onWindowOpen={openPlayerWindow}
               key={item.player.id}
               name={item.player.name}
               games={item.statistics[0].games.appearences}
