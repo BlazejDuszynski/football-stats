@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import classes from "./PlayerWindow.module.css";
+import PlayerWindowHeader from "./PlayerWindowHeader";
 
 const PlayerWindow = (props) => {
   return (
@@ -8,7 +9,9 @@ const PlayerWindow = (props) => {
         className={classes.backdrop}
         onClick={props.onPlayerWindowClose}
       ></div>
-      <div className={classes.playerWindow}>asdasd</div>
+      <div className={classes.playerWindow}>
+        <PlayerWindowHeader></PlayerWindowHeader>
+      </div>
     </Fragment>
   );
 };
