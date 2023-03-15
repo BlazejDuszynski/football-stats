@@ -21,15 +21,15 @@ function App() {
   return (
     <Fragment>
       <div className="App">
-        {isPlayerWindowOpen && <PlayerWindow />}
+        {isPlayerWindowOpen && (
+          <PlayerWindow onPlayerWindowClose={closePlayerWindowHandler} />
+        )}
         <AppHeader />
         <SquadProvider>
           <Search>
             <Dropdown />
           </Search>
-          <SquadSection
-            onPlayerWindowOpen={openPlayerWindowHandler}
-          />
+          <SquadSection onPlayerWindowOpen={openPlayerWindowHandler} />
         </SquadProvider>
       </div>
     </Fragment>
