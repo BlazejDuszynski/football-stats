@@ -10,7 +10,10 @@ const SquadItem = (props) => {
       <td>{props.goals}</td>
       <td>{props.assists}</td>
       <td>
-        <button className={classes.moreButton} onClick={props.onWindowOpen}>
+        <button
+          className={classes.moreButton}
+          onClick={props.onPlayerWindowOpen}
+        >
           More
         </button>
       </td>

@@ -5,28 +5,32 @@ import Search from "./Components/UI/Search";
 import SquadSection from "./Components/Layout/SquadSection";
 import SquadProvider from "./Components/Store/SquadProvider";
 import PlayerWindow from "./Components/Layout/Player/PlayerWindow";
-import { useContext, Fragment } from "react";
-import PlayerWindowContext from "./Components/Store/playerWindow-context";
-import PlayerWindowProvider from "./Components/Store/PlayerWindowProvider";
+import { Fragment, useState } from "react";
 
 function App() {
-  const playerWindowCtx = useContext(PlayerWindowContext);
+  const [isPlayerWindowOpen, setIsPlayerWindowOpen] = useState(false);
 
-  console.log(playerWindowCtx.playerWindowOpen);
+  const openPlayerWindowHandler = () => {
+    setIsPlayerWindowOpen(true);
+  };
+
+  const closePlayerWindowHandler = () => {
+    setIsPlayerWindowOpen(false);
+  };
 
   return (
     <Fragment>
       <div className="App">
-        <PlayerWindowProvider>
-          {playerWindowCtx.playerWindowOpen && <PlayerWindow />}
-          <AppHeader />
-          <SquadProvider>
-            <Search>
-              <Dropdown />
-            </Search>
-            <SquadSection />
-          </SquadProvider>
-        </PlayerWindowProvider>
+        {isPlayerWindowOpen && <PlayerWindow />}
+        <AppHeader />
+        <SquadProvider>
+          <Search>
+            <Dropdown />
+          </Search>
+          <SquadSection
+            onPlayerWindowOpen={openPlayerWindowHandler}
+          />
+        </SquadProvider>
       </div>
     </Fragment>
   );
