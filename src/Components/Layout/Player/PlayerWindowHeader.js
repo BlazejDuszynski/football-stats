@@ -1,4 +1,5 @@
 import React from "react";
+import PlayerDetail from "./PlayerDetail";
 import classes from "./PlayerWindowHeader.module.css";
 
 function PlayerWindowHeader(props) {
@@ -16,12 +17,12 @@ function PlayerWindowHeader(props) {
         </div>
       </div>
       <div className={classes.details}>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <PlayerDetail title="Date of birth" data="10.08.1971" />
+        <PlayerDetail title="Nationality" data="Ireland" />
+        <PlayerDetail title="Position" data="Midfielder" />
+        <PlayerDetail title="Weight" data="76 kg" />
+        <PlayerDetail title="Height" data="178 cm" />
+        <PlayerDetail title="Team" data="Manchester United" />
       </div>
     </header>
   );

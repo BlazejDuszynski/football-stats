@@ -1,0 +1,25 @@
+.playerDetail {
+    place-self: center stretch;
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    background-color: inherit;
+}
+
+.title {
+    color: #9a96d3;
+    font-size: 0.7em;
+    align-self: flex-start;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    background-color: inherit;
+}
+
+.data {
+    border: 1px solid #4776E6;
+    color: #d3d1f0;
+    padding: 10px;
+    background-color: inherit;
+}

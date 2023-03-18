@@ -9,7 +9,7 @@
 }
 
 .intro {
-    width: 30%;
+    width: 35%;
     display: flex;
     gap: 40px;
     justify-items: center;
@@ -40,5 +40,9 @@
 }
 
 .details {
-    width: 70%;
+    width: 65%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 40px;
+    background-color: inherit;
 }
