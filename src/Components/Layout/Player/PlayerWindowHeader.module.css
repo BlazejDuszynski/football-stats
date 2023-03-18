@@ -16,6 +16,7 @@
     align-items: center;
     justify-content: center;
     background-color: inherit;
+    background-color: #100f1f;
 }
 
 .photo {
@@ -26,6 +27,7 @@
 
 .name {
     background-color: inherit;
+    position: relative;
 }
 
 .name__first {
@@ -39,10 +41,26 @@
     color: #d3d1f0;
 }
 
+.name__number {
+    background-color: inherit;
+    color: #9a96d350;
+    font-size: 2em;
+    position: absolute;
+    top: 110%;
+    font-family: 'Oswald', sans-serif;
+    font-style: italic;
+}
+
 .details {
     width: 65%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0 40px;
+    background-color: #100f1f;
+}
+
+.name__hash {
+    font-size: 0.5em;
     background-color: inherit;
+    color: #9a96d350;
 }
