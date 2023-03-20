@@ -1,6 +1,7 @@
 .dropdown {
-    width: 50%;
+    width: 20%;
     position: relative;
+    margin: 30px 30px 15px;
 }
 
 .dropdown * {
@@ -28,7 +29,7 @@
 
 .arrowIcon {
     background-color: inherit;
-    transition: background-color 0.3s ease-in-out;
+        transition: background-color 0.3s ease-in-out;
 }
 
 .select:hover .arrowIcon {
