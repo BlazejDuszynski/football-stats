@@ -4,10 +4,9 @@ import classes from "./PlayerWindow.module.css";
 import PlayerWindowHeader from "./PlayerWindowHeader";
 import StatsContainer from "./Stats/StatsContainer";
 import StatsItem from "./Stats/StatsItem";
+import StatsGeneral from "./Stats/StatsGeneral";
 
 const PlayerWindow = (props) => {
-  const additionalClass = classes.firstStatsItem;
-
   return (
     <Fragment>
       <div
@@ -18,7 +17,7 @@ const PlayerWindow = (props) => {
         <PlayerWindowHeader />
         <DropdownPlayerWindow />
         <StatsContainer>
-          <StatsItem header="General" additionalClass={additionalClass} />
+          <StatsGeneral />
           <StatsItem header="Passes" />
           <StatsItem header="Dribbles" />
           <StatsItem header="Tackles" />
