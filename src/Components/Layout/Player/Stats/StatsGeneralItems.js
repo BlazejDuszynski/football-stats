@@ -11,7 +11,7 @@ const StatsGeneralItems = () => {
             <GiSoccerField className={classes.pitchIcon}/>
             <p className={classes.title}>Games</p>
           </div>
-          <p className={classes.data}></p>
+          <p className={classes.data}>31</p>
         </li>
         <li className={classes.listItem}>Goals</li>
         <li className={classes.listItem}>Assists</li>
