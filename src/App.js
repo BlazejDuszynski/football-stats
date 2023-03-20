@@ -15,7 +15,7 @@ function App() {
   };
 
   const closePlayerWindowHandler = () => {
-    setIsPlayerWindowOpen(false);
+    setIsPlayerWindowOpen(false); 
   };
 
   return (
