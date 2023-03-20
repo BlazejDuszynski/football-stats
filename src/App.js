@@ -15,23 +15,23 @@ function App() {
   };
 
   const closePlayerWindowHandler = () => {
-    setIsPlayerWindowOpen(false); 
+    setIsPlayerWindowOpen(false);
   };
 
   return (
     <Fragment>
-      <div className="App">
-        {isPlayerWindowOpen && (
-          <PlayerWindow onPlayerWindowClose={closePlayerWindowHandler} />
-        )}
-        <AppHeader />
-        <SquadProvider>
+      <SquadProvider>
+        <div className="App">
+          {isPlayerWindowOpen && (
+            <PlayerWindow onPlayerWindowClose={closePlayerWindowHandler} />
+          )}
+          <AppHeader />
           <Search>
             <Dropdown />
           </Search>
           <SquadSection onPlayerWindowOpen={openPlayerWindowHandler} />
-        </SquadProvider>
-      </div>
+        </div>
+      </SquadProvider>
     </Fragment>
   );
 }
