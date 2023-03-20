@@ -11,7 +11,7 @@
 }
 
 .listItem {
-    border-bottom: 2px solid #100f1f;
+    border-bottom: 1px solid #100f1f;
     width: 100%;
     list-style: none;
     padding: 20px;
@@ -19,21 +19,55 @@
     align-items: center;
     gap: 20px;
     justify-content: space-between;
+    height: 60px;
 }
 
 .description {
     display: flex;
     gap: 10px;
     align-items: center;
-    color: #d3d1f0;
 }
 
 .pitchIcon {
     font-size: 2em;
 }
 
+.goalIcon {
+    font-size: 1.7em;
+    color: green;
+}
+
+.assistIcon {
+    font-size: 1.7em;
+}
+
+.title {
+    color: #d3d1f0;
+}
+
 .data {
     font-size: 1.1em;
     padding: 5px;
-    border: 1px solid #4776E6;
+    height: 30px;
+    width: 30px;
+    /* border: 1px solid #4776E6; */
+    color: #d3d1f0;
+}
+
+.yellowCard {
+    width: 20px;
+    height: 25px;
+    background-color: yellow;
+}
+
+.doubleYellow {
+    width: 20px;
+    height: 25px;
+
+}
+
+.redCard {
+    width: 20px;
+    height: 25px;
+    background-color: red;
 }

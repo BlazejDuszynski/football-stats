@@ -1,8 +1,7 @@
 .statsItemGeneral {
     grid-column: 1 / 4;
     margin: 0 10%;
-    height: 40vh;
-    border: solid 1px #100f1f;
+    min-height: 40vh;
     border-radius: 10px;
 }
 
@@ -10,7 +9,7 @@
     background-color: #100f1f;
     width: 100%;
     height: 15%;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
     padding: 0 30px;
     color: #d3d1f0;
     text-transform: uppercase;
