@@ -1,0 +1,12 @@
+.pieChartContainer {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.pieChartLabel {
+    text-align: center;
+    margin-bottom: 30px;
+}
