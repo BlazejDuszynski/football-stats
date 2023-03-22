@@ -71,3 +71,7 @@
     height: 25px;
     background-color: red;
 }
+
+.listItem:nth-child(3) {
+    border: none;
+}
