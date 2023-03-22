@@ -7,7 +7,7 @@ const ChartContainer = () => {
     labels: ["Starting 11", "Bench"],
     datasets: [
       {
-        label: "Starting 11 chart",
+        label: "Starting 11",
         data: [76, 24],
         backgroundColor: ["#4776E6", "#1c1b36"],
         hoverBackgroundColor: ["#4776E6", "#1c1b36"],
@@ -22,7 +22,7 @@ const ChartContainer = () => {
     labels: ["Goals involvement", ""],
     datasets: [
       {
-        label: "Starting 11 chart",
+        label: "Goals involvement",
         data: [38, 62],
         backgroundColor: ["#4776E6", "#1c1b36"],
         hoverBackgroundColor: ["#4776E6", "#1c1b36"],
@@ -37,7 +37,7 @@ const ChartContainer = () => {
     labels: ["Minutes played", ""],
     datasets: [
       {
-        label: "Starting 11 chart",
+        label: "Minutes played",
         data: [88, 12],
         backgroundColor: ["#4776E6", "#1c1b36"],
         hoverBackgroundColor: ["#4776E6", "#1c1b36"],
