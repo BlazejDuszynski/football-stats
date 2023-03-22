@@ -1,12 +1,25 @@
 .pieChartContainer {
-    width: 200px;
-    height: 200px;
+    width: 170px;
+    height: 170px;
     display: flex;
     flex-direction: column;
     gap: 30px;
+    position: relative;
 }
 
 .pieChartLabel {
     text-align: center;
     margin-bottom: 30px;
+    color: #d3d1f0;
+    font-family: 'Oswald', sans-serif;
+    font-style: italic;
+    letter-spacing: 1.2px;
+}
+
+.pieChartSummaryNumber {
+    position: absolute;
+    font-family: 'Oswald', sans-serif;
+    font-style: italic;
+    letter-spacing: 1.2px;
+    font-size: 1.3em;
 }

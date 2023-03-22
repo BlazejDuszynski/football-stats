@@ -28,6 +28,7 @@ const PieChart = () => {
   return (
     <div className={classes.pieChartContainer}>
       <Doughnut data={data} options={options}></Doughnut>
+      <p className={classes.pieChartSummaryNumber}>76%</p>
       <label className={classes.pieChartLabel}>Starting 11</label>
     </div>
   );
