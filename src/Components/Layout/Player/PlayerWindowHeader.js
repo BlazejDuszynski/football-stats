@@ -7,7 +7,7 @@ function PlayerWindowHeader(props) {
     <header className={classes.header}>
       <div className={classes.intro}>
         <img
-          src="https://img.a.transfermarkt.technology/portrait/header/3396-1570441538.jpg?lm=1"
+          src="https://assets.manutd.com/AssetPicker/images/0/0/10/126/687719/Legends-Profile_Roy-Keane1523462361304.jpg  "
           alt="Roy Keane face"
           className={classes.photo}
         ></img>
