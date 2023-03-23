@@ -1,7 +1,7 @@
 import React from "react";
 
 const PlayerContext = React.createContext({
-  player: {},
+  playerData: {},
   fetchPlayerData: () => {},
   playerID: "",
   getPlayerID: (id) => {},

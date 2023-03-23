@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import classes from "./StatsGeneralItems.module.css";
 import { GiSoccerField } from "react-icons/gi";
 import { IoIosFootball } from "react-icons/io";
+import PlayerContext from "../../../Store/player-context";
 
 const StatsGeneralItems = () => {
+  const { playerData } = useContext(PlayerContext);
+  console.log(playerData);
+
   return (
     <div className={classes.statsGeneralItem}>
       <ul className={classes.list}>
