@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import PlayerContext from "./player-context";
+import SquadContext from "./squad-context";
 
 const PlayerProvider = (props) => {
   const [playerData, setPlayerData] = useState(null);
+  const { season } = useContext(SquadContext);
 
-  
+  console.log(season);
+
+  const fetchPlayerDataHandler = () => {};
 
   const playerContext = {
     player: {},

@@ -14,13 +14,13 @@ const PieChart = (props) => {
   const summaryNumber = (props.data.datasets[0].data[0] / dataSum) * 100;
   const summaryNumberPercentage = summaryNumber + "%";
 
-  console.log(props.data.datasets[0].data);
-
   return (
     <div className={classes.pieChartContainer}>
       <Doughnut data={props.data} options={props.options}></Doughnut>
       <p className={classes.pieChartSummaryNumber}>{summaryNumberPercentage}</p>
-      <label className={classes.pieChartLabel}>{props.data.datasets[0].label}</label>
+      <label className={classes.pieChartLabel}>
+        {props.data.datasets[0].label}
+      </label>
     </div>
   );
 };

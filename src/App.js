@@ -6,6 +6,7 @@ import SquadSection from "./Components/Layout/SquadSection";
 import SquadProvider from "./Components/Store/SquadProvider";
 import PlayerWindow from "./Components/Layout/Player/PlayerWindow";
 import { Fragment, useState } from "react";
+import PlayerProvider from "./Components/Store/PlayerProvider";
 
 function App() {
   const [isPlayerWindowOpen, setIsPlayerWindowOpen] = useState(false);
@@ -21,16 +22,18 @@ function App() {
   return (
     <Fragment>
       <SquadProvider>
-        <div className="App">
-          {isPlayerWindowOpen && (
-            <PlayerWindow onPlayerWindowClose={closePlayerWindowHandler} />
-          )}
-          <AppHeader />
-          <Search>
-            <Dropdown />
-          </Search>
-          <SquadSection onPlayerWindowOpen={openPlayerWindowHandler} />
-        </div>
+        <PlayerProvider>
+          <div className="App">
+            {isPlayerWindowOpen && (
+              <PlayerWindow onPlayerWindowClose={closePlayerWindowHandler} />
+            )}
+            <AppHeader />
+            <Search>
+              <Dropdown />
+            </Search>
+            <SquadSection onPlayerWindowOpen={openPlayerWindowHandler} />
+          </div>
+        </PlayerProvider>
       </SquadProvider>
     </Fragment>
   );
