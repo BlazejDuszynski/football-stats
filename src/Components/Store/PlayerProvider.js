@@ -7,8 +7,6 @@ const PlayerProvider = (props) => {
   const [playerData, setPlayerData] = useState({});
   const { season } = useContext(SquadContext);
 
-  console.log(playerID);
-
   const options = {
     method: "GET",
     headers: {
@@ -26,8 +24,30 @@ const PlayerProvider = (props) => {
       options
     );
     const fetchedPlayerData = await response.json();
-    console.log(fetchedPlayerData);
-    setPlayerData(fetchedPlayerData);
+    const player = {
+      info: {
+        name: fetchedPlayerData.response[0].player.name,
+        birthDate: fetchedPlayerData.response[0].player.birth.date,
+        nationality: fetchedPlayerData.response[0].player.nationality,
+        position: fetchedPlayerData.response[0].statistics[0].games.position,
+        weight: fetchedPlayerData.response[0].player.weight,
+        height: fetchedPlayerData.response[0].player.height,
+        team: fetchedPlayerData.response[0].statistics[0].team.name,
+        kitNumber: "9",
+      },
+      statistics: {
+        games: fetchedPlayerData.response[0].statistics[0].games.appearences,
+        lineups: fetchedPlayerData.response[0].statistics[0].games.lineups,
+        minutes: fetchedPlayerData.response[0].statistics[0].games.minutes,
+        goals: fetchedPlayerData.response[0].statistics[0].goals.total,
+        assists: fetchedPlayerData.response[0].statistics[0].goals.assists,
+        redCards: fetchedPlayerData.response[0].statistics[0].cards.red,
+        yellowCards: fetchedPlayerData.response[0].statistics[0].cards.yellow,
+        yellowRedCards:
+          fetchedPlayerData.response[0].statistics[0].cards.yellowred,
+      },
+    };
+    setPlayerData(player);
   }
 
   const getPlayerIDHandler = (id) => {
@@ -35,7 +55,7 @@ const PlayerProvider = (props) => {
   };
 
   const playerContext = {
-    playerData: {},
+    playerData: playerData,
     fetchPlayerData: fetchPlayerDataHandler,
     playerID: playerID,
     getPlayerID: getPlayerIDHandler,

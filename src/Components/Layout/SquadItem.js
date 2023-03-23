@@ -7,7 +7,7 @@ const SquadItem = (props) => {
 
   const handleClick = () => {
     props.onPlayerWindowOpen();
-    playerCtx.getPlayerID(props.id);
+    playerCtx.getPlayerID(+props.id);
     playerCtx.fetchPlayerData();
   };
 
