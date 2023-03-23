@@ -1,8 +1,12 @@
 import React from "react";
 import PlayerDetail from "./PlayerDetail";
 import classes from "./PlayerWindowHeader.module.css";
+import { useContext } from "react";
+import PlayerContext from "../../Store/player-context";
 
-function PlayerWindowHeader(props) {
+function PlayerWindowHeader() {
+  const playerCtx = useContext(PlayerContext);
+
   return (
     <header className={classes.header}>
       <div className={classes.intro}>
