@@ -5,6 +5,7 @@ import SquadContext from "./squad-context";
 const PlayerProvider = (props) => {
   const [playerID, setPlayerID] = useState(null);
   const [playerData, setPlayerData] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
   const { season } = useContext(SquadContext);
 
   const options = {
@@ -48,6 +49,7 @@ const PlayerProvider = (props) => {
       },
     };
     setPlayerData(player);
+    setIsLoading(false);
   }
 
   const getPlayerIDHandler = (id) => {
@@ -59,6 +61,7 @@ const PlayerProvider = (props) => {
     fetchPlayerData: fetchPlayerDataHandler,
     playerID: playerID,
     getPlayerID: getPlayerIDHandler,
+    loading: isLoading,
   };
 
   return (

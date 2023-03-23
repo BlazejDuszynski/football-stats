@@ -5,6 +5,7 @@ const PlayerContext = React.createContext({
   fetchPlayerData: () => {},
   playerID: "",
   getPlayerID: (id) => {},
+  loading: "",
 });
 
 export default PlayerContext;
