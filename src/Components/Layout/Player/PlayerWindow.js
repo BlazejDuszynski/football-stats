@@ -18,9 +18,9 @@ const PlayerWindow = (props) => {
         <DropdownPlayerWindow />
         <StatsContainer>
           <StatsGeneral />
-          <StatsItem header="Passes" />
+          {/* <StatsItem header="Passes" />
           <StatsItem header="Dribbles" />
-          <StatsItem header="Tackles" />
+          <StatsItem header="Tackles" /> */}
         </StatsContainer>
       </div>
     </Fragment>
