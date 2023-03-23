@@ -57,8 +57,6 @@ const SquadProvider = (props) => {
     toggleDropdown: toggleDropdownHandler,
   };
 
-  console.log(squadContext.season);
-
   return (
     <SquadContext.Provider value={squadContext}>
       {props.children}
