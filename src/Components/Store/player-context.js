@@ -4,7 +4,7 @@ const PlayerContext = React.createContext({
   player: {},
   fetchPlayerData: () => {},
   playerID: "",
-  getPlayerID: () => {},
+  getPlayerID: (id) => {},
 });
 
 export default PlayerContext;

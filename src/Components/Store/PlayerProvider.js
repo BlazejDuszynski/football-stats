@@ -4,10 +4,10 @@ import SquadContext from "./squad-context";
 
 const PlayerProvider = (props) => {
   const [playerID, setPlayerID] = useState(null);
-  const [playerData, setPlayerData] = useState(null);
+  const [playerData, setPlayerData] = useState({});
   const { season } = useContext(SquadContext);
 
-  console.log(season);
+  console.log(playerID);
 
   const options = {
     method: "GET",
@@ -17,7 +17,18 @@ const PlayerProvider = (props) => {
     },
   };
 
-  const fetchPlayerDataHandler = () => {};
+  async function fetchPlayerDataHandler() {
+    const response = await fetch(
+      "https://api-football-v1.p.rapidapi.com/v3/players?id=" +
+        playerID +
+        "&season=" +
+        season.substring(0, 4),
+      options
+    );
+    const fetchedPlayerData = await response.json();
+    console.log(fetchedPlayerData);
+    setPlayerData(fetchedPlayerData);
+  }
 
   const getPlayerIDHandler = (id) => {
     setPlayerID(id);

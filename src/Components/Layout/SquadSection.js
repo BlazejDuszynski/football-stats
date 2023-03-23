@@ -5,9 +5,7 @@ import SquadTable from "./SquadTable";
 function SquadSection(props) {
   return (
     <section className={classes.squadSection}>
-      <SquadTable
-        onPlayerWindowOpen={props.onPlayerWindowOpen}
-      />
+      <SquadTable onPlayerWindowOpen={props.onPlayerWindowOpen} />
     </section>
   );
 }

@@ -22,6 +22,7 @@ const SquadTable = (props) => {
             <SquadItem
               onPlayerWindowOpen={props.onPlayerWindowOpen}
               key={item.player.id}
+              id={item.player.id}
               name={item.player.name}
               games={item.statistics[0].games.appearences}
               minutes={item.statistics[0].games.minutes}

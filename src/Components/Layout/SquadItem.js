@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
+import PlayerContext from "../Store/player-context";
 import classes from "./SquadItem.module.css";
 
 const SquadItem = (props) => {
+  const playerCtx = useContext(PlayerContext);
+
+  const handleClick = () => {
+    props.onPlayerWindowOpen();
+    playerCtx.getPlayerID(props.id);
+    playerCtx.fetchPlayerData();
+  };
+
   return (
     <tr className={classes.squadItem}>
       <td>{props.name}</td>
@@ -10,10 +19,7 @@ const SquadItem = (props) => {
       <td>{props.goals}</td>
       <td>{props.assists}</td>
       <td>
-        <button
-          className={classes.moreButton}
-          onClick={props.onPlayerWindowOpen}
-        >
+        <button className={classes.moreButton} onClick={handleClick}>
           More
         </button>
       </td>
