@@ -30,6 +30,14 @@ const SquadProvider = (props) => {
       options
     );
     const teamSquad = await response.json();
+    // fetch(
+    //   "https://football-games-researcher-default-rtdb.firebaseio.com/seasons/2008.json",
+    //   {
+    //     method: "POST",
+    //     body: JSON.stringify(teamSquad),
+    //     headers: { "Content-Type": "application/json" },
+    //   }
+    // );
     setSquad(teamSquad);
   }
 
