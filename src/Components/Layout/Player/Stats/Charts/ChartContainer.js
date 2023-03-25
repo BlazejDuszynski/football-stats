@@ -18,6 +18,11 @@ const ChartContainer = () => {
     100
   ).toFixed(0);
 
+  const minutesPlayed = (
+    (playerCtx.playerData.statistics.minutes / 3420) *
+    100
+  ).toFixed(0);
+
   const dataFirst = {
     labels: ["Starting 11", "Bench"],
     datasets: [
@@ -53,7 +58,7 @@ const ChartContainer = () => {
     datasets: [
       {
         label: "Minutes played",
-        data: [88, 12],
+        data: [minutesPlayed, 100 - minutesPlayed],
         backgroundColor: ["#4776E6", "#1c1b40"],
         hoverBackgroundColor: ["#4776E6", "#1c1b40"],
         borderColor: ["#4776E6", "#1c1b40"],
@@ -85,7 +90,7 @@ const ChartContainer = () => {
         options={options}
         summary={goalsInvolvement}
       />
-      <PieChart data={dataThird} options={options} />
+      <PieChart data={dataThird} options={options} summary={minutesPlayed} />
     </div>
   );
 };
