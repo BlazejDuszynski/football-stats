@@ -11,8 +11,8 @@ function PlayerWindowHeader() {
     <header className={classes.header}>
       <div className={classes.intro}>
         <img
-          src="https://assets.manutd.com/AssetPicker/images/0/0/10/126/687719/Legends-Profile_Roy-Keane1523462361304.jpg  "
-          alt="Roy Keane face"
+          src={playerCtx.playerData.info.image}
+          alt={playerCtx.playerData.info.name + " photo"}
           className={classes.photo}
         ></img>
         <div className={classes.name}>

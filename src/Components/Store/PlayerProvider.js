@@ -37,6 +37,7 @@ const PlayerProvider = (props) => {
         height: fetchedPlayerData.response[0].player.height,
         team: fetchedPlayerData.response[0].statistics[0].team.name,
         kitNumber: "9",
+        image: fetchedPlayerData.response[0].player.photo,
       },
       statistics: {
         games: fetchedPlayerData.response[0].statistics[0].games.appearences,

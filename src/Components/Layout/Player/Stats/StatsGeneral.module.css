@@ -1,6 +1,6 @@
 .statsItemGeneral {
     grid-column: 1 / 4;
-    margin: 0 10% 30px;
+    margin: 30px 10% 30px;
     min-height: 40vh;
     border-radius: 10px;
 }
