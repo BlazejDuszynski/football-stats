@@ -6,8 +6,8 @@ const SquadItem = (props) => {
   const playerCtx = useContext(PlayerContext);
 
   const handleClick = () => {
-    props.onPlayerWindowOpen();
     playerCtx.getPlayerID(+props.id);
+    props.onPlayerWindowOpen();
   };
 
   return (
