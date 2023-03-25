@@ -6,7 +6,6 @@ import PlayerContext from "../../Store/player-context";
 
 function PlayerWindowHeader() {
   const playerCtx = useContext(PlayerContext);
-  console.log(playerCtx.playerData)
 
   return (
     <header className={classes.header}>
@@ -17,20 +16,34 @@ function PlayerWindowHeader() {
           className={classes.photo}
         ></img>
         <div className={classes.name}>
-          <p className={classes.name__first}>Roy</p>
-          <p className={classes.name__second}>Keane</p>
+          <p className={classes.name__first}>
+            {playerCtx.playerData.info.firstName}
+          </p>
+          <p className={classes.name__second}>
+            {playerCtx.playerData.info.lastName}
+          </p>
           <p className={classes.name__number}>
-            <span className={classes.name__hash}>#</span>16
+            <span className={classes.name__hash}>#</span>
+            {playerCtx.playerData.info.kitNumber}
           </p>
         </div>
       </div>
       <div className={classes.details}>
-        <PlayerDetail title="Date of birth" data="10.08.1971" />
-        <PlayerDetail title="Nationality" data="Ireland" />
-        <PlayerDetail title="Position" data="Midfielder" />
-        <PlayerDetail title="Weight" data="76 kg" />
-        <PlayerDetail title="Height" data="178 cm" />
-        <PlayerDetail title="Team" data="Manchester United" />
+        <PlayerDetail
+          title="Date of birth"
+          data={playerCtx.playerData.info.birthDate}
+        />
+        <PlayerDetail
+          title="Nationality"
+          data={playerCtx.playerData.info.nationality}
+        />
+        <PlayerDetail
+          title="Position"
+          data={playerCtx.playerData.info.position}
+        />
+        <PlayerDetail title="Weight" data={playerCtx.playerData.info.weight} />
+        <PlayerDetail title="Height" data={playerCtx.playerData.info.height} />
+        <PlayerDetail title="Team" data={playerCtx.playerData.info.team} />
       </div>
     </header>
   );
