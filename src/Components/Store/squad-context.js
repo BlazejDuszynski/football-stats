@@ -8,6 +8,7 @@ const SquadContext = React.createContext({
   fetchSquadHandler: function () {},
   dropdownActive: "",
   toggleDropdown: () => {},
+  loading: "",
 });
 
 export default SquadContext;
