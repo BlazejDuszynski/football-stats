@@ -28,6 +28,8 @@ const PlayerProvider = (props) => {
     const player = {
       info: {
         name: fetchedPlayerData.response[0].player.name,
+        firstName: fetchedPlayerData.response[0].player.firstname,
+        lastName: fetchedPlayerData.response[0].player.lastname,
         birthDate: fetchedPlayerData.response[0].player.birth.date,
         nationality: fetchedPlayerData.response[0].player.nationality,
         position: fetchedPlayerData.response[0].statistics[0].games.position,

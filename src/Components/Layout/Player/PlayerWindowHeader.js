@@ -6,6 +6,7 @@ import PlayerContext from "../../Store/player-context";
 
 function PlayerWindowHeader() {
   const playerCtx = useContext(PlayerContext);
+  console.log(playerCtx.playerData)
 
   return (
     <header className={classes.header}>
@@ -18,9 +19,9 @@ function PlayerWindowHeader() {
         <div className={classes.name}>
           <p className={classes.name__first}>Roy</p>
           <p className={classes.name__second}>Keane</p>
-          {/* <p className={classes.name__number}>
+          <p className={classes.name__number}>
             <span className={classes.name__hash}>#</span>16
-          </p> */}
+          </p>
         </div>
       </div>
       <div className={classes.details}>
