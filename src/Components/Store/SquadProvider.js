@@ -5,7 +5,9 @@ const SquadProvider = (props) => {
   const [selectedSeason, setSelectedSeason] = useState("");
   const [isDropdownActive, setIsDropDownActive] = useState(false);
   const [squad, setSquad] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
+  const convertedSquad = [];
   const selectSeasonHandler = (season) => {
     setSelectedSeason(season);
     setIsDropDownActive(false);
@@ -25,12 +27,28 @@ const SquadProvider = (props) => {
 
   async function onDropdownSubmit() {
     const response = await fetch(
-      "https://api-football-v1.p.rapidapi.com/v3/players?team=33&season=" +
-        selectedSeason.substring(0, 4),
+      // "https://api-football-v1.p.rapidapi.com/v3/players?team=33&season=" +
+      //   selectedSeason.substring(0, 4),
+      "https://football-games-researcher-default-rtdb.firebaseio.com/seasons/" +
+        selectedSeason.substring(0, 4) +
+        ".json",
       options
     );
     const teamSquad = await response.json();
-    setSquad(teamSquad);
+    // fetch(
+    //   "https://football-games-researcher-default-rtdb.firebaseio.com/seasons/2008.json",
+    //   {
+    //     method: "POST",
+    //     body: JSON.stringify(teamSquad),
+    //     headers: { "Content-Type": "application/json" },
+    //   }
+    // );
+    for (const key in teamSquad) {
+      convertedSquad.push(teamSquad[key].response);
+    }
+    // console.log(convertedSquad);
+    setSquad(convertedSquad);
+    setIsLoading(false);
   }
 
   const squadContext = {
@@ -55,6 +73,7 @@ const SquadProvider = (props) => {
     fetchSquadHandler: onDropdownSubmit,
     dropdownActive: isDropdownActive,
     toggleDropdown: toggleDropdownHandler,
+    loading: isLoading,
   };
 
   return (
