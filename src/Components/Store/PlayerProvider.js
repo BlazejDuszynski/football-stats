@@ -17,6 +17,7 @@ const PlayerProvider = (props) => {
   };
 
   async function fetchPlayerDataHandler() {
+    setIsLoading(true);
     const response = await fetch(
       "https://api-football-v1.p.rapidapi.com/v3/players?id=" +
         playerID +
