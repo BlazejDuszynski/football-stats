@@ -90,7 +90,7 @@
 
 @media (max-width: 850px) {
     .intro {
-        width: 80%;
+        width: 100%;
     }
 }
 
@@ -109,5 +109,6 @@
 @media (max-width: 400px) {
     .intro {
         height: 120px;
+        font-size: 0.8em;
     }
 }

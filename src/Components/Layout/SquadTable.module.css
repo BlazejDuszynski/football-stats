@@ -19,3 +19,9 @@ th {
         font-size: .8em;
     }
 }
+
+@media (max-width: 405px) {
+    table {
+        font-size: .7em;
+    }
+}

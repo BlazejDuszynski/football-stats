@@ -22,3 +22,21 @@ td {
 .squadItem:nth-child(odd) td {
     background-color: #090818;
 }
+
+@media (max-width: 600px) {
+    .moreButton {
+        font-size: .9em;
+    }
+}
+
+@media (max-width: 475px) {
+    .moreButton {
+        font-size: .8em;
+    }
+}
+
+@media (max-width: 405px) {
+    .moreButton {
+        font-size: .7em;
+    }
+}

@@ -6,6 +6,7 @@ import StatsContainer from "./Stats/StatsContainer";
 import StatsItem from "./Stats/StatsItem";
 import StatsGeneral from "./Stats/StatsGeneral";
 import PlayerContext from "../../Store/player-context";
+import { IoClose } from "react-icons/io5";
 
 const PlayerWindow = (props) => {
   const playerCtx = useContext(PlayerContext);
@@ -25,6 +26,12 @@ const PlayerWindow = (props) => {
           onClick={props.onPlayerWindowClose}
         ></div>
         <div className={classes.playerWindow}>
+          <button
+            className={classes.closeButton}
+            onClick={props.onPlayerWindowClose}
+          >
+            <IoClose className={classes.closeButtonIcon} />
+          </button>
           <PlayerWindowHeader />
           {/* <DropdownPlayerWindow /> */}
           <StatsContainer>

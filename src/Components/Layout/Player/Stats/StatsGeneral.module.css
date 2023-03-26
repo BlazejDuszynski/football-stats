@@ -22,3 +22,16 @@
         margin: 30px 5% 30px;
     }
 }
+
+@media (max-width: 700px) {
+    .header {
+        height: 8%;
+    }
+}
+
+
+@media (max-width: 485px) {
+    .header {
+        height: 5%;
+    }
+}

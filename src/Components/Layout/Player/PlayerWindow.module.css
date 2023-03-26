@@ -22,6 +22,20 @@
     color: white;
 }
 
+.closeButton {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    border: none;
+    font-size: 1.4em;
+    cursor: pointer;
+    background-color: #100f1f;
+}
+
+.closeButtonIcon {
+    background-color: #100f1f;
+}
+
 @media (max-width: 1200px) {
     .playerWindow {
         width: 90vw;
