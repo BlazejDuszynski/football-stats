@@ -7,6 +7,7 @@ const PlayerProvider = (props) => {
   const [playerData, setPlayerData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const { season } = useContext(SquadContext);
+  console.log(playerData);
 
   const options = {
     method: "GET",

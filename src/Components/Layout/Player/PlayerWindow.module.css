@@ -1,6 +1,6 @@
 .backdrop {
     z-index: 90;
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     height: 100vh;
@@ -14,7 +14,7 @@
     height: 80vh;
     z-index: 99;
     background-color: #1c1b36;
-    position: absolute;
+    position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
