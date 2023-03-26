@@ -3,3 +3,9 @@
     background-color: #111029;
     border-radius: 20px;
 }
+
+@media (max-width: 768px) {
+    .squadSection {
+        border-radius: 0;
+    }
+  }

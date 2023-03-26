@@ -5,3 +5,15 @@
     justify-content: space-evenly;
     gap: 30px;
 }
+
+@media (max-width:600px) {
+    .searchSection {
+        max-width: 70%;
+    }
+}
+
+@media (max-width:475px) {
+    .searchSection {
+        max-width: 90%;
+    }
+}
