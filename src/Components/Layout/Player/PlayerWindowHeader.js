@@ -22,10 +22,10 @@ function PlayerWindowHeader() {
           <p className={classes.name__second}>
             {playerCtx.playerData.info.lastName}
           </p>
-          <p className={classes.name__number}>
+          {/* <p className={classes.name__number}>
             <span className={classes.name__hash}>#</span>
             {playerCtx.playerData.info.kitNumber}
-          </p>
+          </p> */}
         </div>
       </div>
       <div className={classes.details}>
