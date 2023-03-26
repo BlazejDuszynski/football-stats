@@ -11,9 +11,9 @@
 .title {
     color: #9a96d3;
     font-size: 0.7em;
-    align-self: flex-start;
+    align-self: center;
     text-transform: uppercase;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     background-color: inherit;
 }
 
