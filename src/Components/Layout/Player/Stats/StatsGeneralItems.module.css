@@ -12,7 +12,6 @@
 
 .listItem {
     border-bottom: 1px solid #100f1f;
-    width: 100%;
     list-style: none;
     padding: 20px;
     display: flex;
@@ -49,27 +48,27 @@
     font-size: 1.1em;
     padding: 5px;
     height: 30px;
-    width: 30px;
-    /* border: 1px solid #4776E6; */
     color: #d3d1f0;
+    width: 50px;
+    text-align: center;
 }
 
 .yellowCard {
     width: 20px;
     height: 25px;
+    margin-right: 5px;
     background-color: yellow;
 }
 
-.doubleYellow {
-    width: 20px;
-    height: 25px;
-    background-image: linear-gradient(to bottom right, yellow 50%, red 50%);
+.minutes {
+    font-size: 1.5em;
 }
 
 .redCard {
     width: 20px;
     height: 25px;
     background-color: red;
+    margin-right: 5px;
 }
 
 .listItem:nth-child(3) {
