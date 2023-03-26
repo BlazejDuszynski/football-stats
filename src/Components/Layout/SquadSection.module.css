@@ -8,4 +8,10 @@
     .squadSection {
         border-radius: 0;
     }
-  }
+}
+
+@media (max-width: 600px) {
+    .squadSection {
+        padding: 40px 2%;
+    }
+}
