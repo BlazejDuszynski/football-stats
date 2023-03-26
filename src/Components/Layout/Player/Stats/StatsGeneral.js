@@ -3,7 +3,7 @@ import classes from "./StatsGeneral.module.css";
 import StatsGeneralItems from "./StatsGeneralItems";
 import ChartContainer from "./Charts/ChartContainer";
 
-const StatsGeneral = (props) => {
+const StatsGeneral = () => {
   return (
     <div className={classes.statsItemGeneral}>
       <header className={classes.header}>General</header>

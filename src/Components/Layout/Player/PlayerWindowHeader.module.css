@@ -65,3 +65,38 @@
     background-color: inherit;
     color: #9a96d350;
 }
+
+@media (max-width: 850px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        gap: 30px;
+    }
+
+    .details {
+        width: 100%;
+    }
+
+    .photo {
+        margin: 0 30px;
+        width: 200px;
+    }
+
+    .intro {
+        height: 200px;
+        width: 50%;
+    }
+}
+
+@media (max-width: 850px) {
+    .intro {
+        width: 80%;
+    }
+}
+
+@media (max-width: 400px) {
+    .intro {
+        width: 100%;
+        margin: 0 0 0 30px;
+    }
+}

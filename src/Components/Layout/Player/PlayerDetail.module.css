@@ -24,3 +24,9 @@
     padding: 10px;
     background-color: inherit;
 }
+
+@media (max-width: 850px) {
+    .playerDetail {
+        margin-bottom: 10px;
+    }
+}
