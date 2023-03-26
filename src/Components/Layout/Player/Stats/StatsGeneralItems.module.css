@@ -74,3 +74,13 @@
 .listItem:nth-child(3) {
     border: none;
 }
+
+@media (max-width: 700px) {
+    .statsGeneralItem {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .listItem:nth-child(3) {
+        border-bottom: 1px solid #100f1f;
+    }
+}

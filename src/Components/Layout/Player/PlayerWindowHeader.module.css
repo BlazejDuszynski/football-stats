@@ -94,9 +94,20 @@
     }
 }
 
+@media (max-width: 540px) {
+    .details {
+        font-size: .9em;
+    }
+}
+
+@media (max-width: 466px) {
+    .details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 400px) {
     .intro {
-        width: 100%;
-        margin: 0 0 0 30px;
+        height: 120px;
     }
 }
