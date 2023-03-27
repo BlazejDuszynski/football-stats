@@ -8,15 +8,6 @@
     justify-content: center;
 }
 
-.logo {
-    background-image: url("/images/premier\ league\ logo.png");
-    background-size: contain;
-    color: white;
-    background-repeat: no-repeat;
-    height: 150px;
-    width: 200px;
-}
-
 h1 {
     margin-bottom: 30px;
     font-size: 1.5em;
