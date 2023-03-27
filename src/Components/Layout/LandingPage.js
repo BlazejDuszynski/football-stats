@@ -4,10 +4,11 @@ import classes from "./LandingPage.module.css";
 function LandingPage() {
   return (
     <div className={classes.landingPage}>
-      {/* <nav className={classes.navbar}>
-        <a className={classes.navbarItem}></a>
-        <a className={classes.navbarItem}></a>
-      </nav> */}
+      <nav className={classes.navbar}>
+        <a className={classes.navbarItem}>Login</a>
+        <a className={classes.navbarItem}>Get started
+        </a>
+      </nav>
       <div className={classes.content}>
         <h1 className={classes.mainHeader}>
           Application with football statistics

@@ -7,6 +7,33 @@
     background-size: cover;
 }
 
+.navbar {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    background-color: transparent;
+    display: flex;
+    gap: 40px;
+}
+
+.navbarItem {
+    font-size: 1.1em;
+    text-transform: uppercase;
+    background-color: transparent;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+.navbarItem:nth-child(2) {
+    font-size: 1.1em;
+    text-transform: uppercase;
+    border: none;
+    background-color: transparent;
+    background-image: linear-gradient(to right, #4776E6 0%, #8E54E9 51%, #4776E6 100%);
+    padding: 15px 20px;
+    border-radius: 20px;
+}
+
 .content {
     position: absolute;
     display: flex;
