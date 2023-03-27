@@ -7,6 +7,7 @@ import SquadProvider from "./Components/Store/SquadProvider";
 import PlayerWindow from "./Components/Layout/Player/PlayerWindow";
 import { Fragment, useState } from "react";
 import PlayerProvider from "./Components/Store/PlayerProvider";
+import LandingPage from "./Components/Layout/LandingPage";
 
 function App() {
   const [isPlayerWindowOpen, setIsPlayerWindowOpen] = useState(false);
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <Fragment>
+      <LandingPage />
       <SquadProvider>
         <PlayerProvider>
           <div className="App">
